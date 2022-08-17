@@ -1,9 +1,9 @@
-import peerDepsExternal from 'rollup-plugin-peer-deps-external'
-import typescript from '@rollup/plugin-typescript'
-import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import postcss from 'rollup-plugin-postcss'
+import resolve from '@rollup/plugin-node-resolve'
+import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
+import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
 
 const packageJson = require('./package.json')
@@ -31,12 +31,12 @@ export default [
 			peerDepsExternal(),
 			resolve(),
 			postcss(),
-			commonjs({
-				exclude: 'node_modules',
-				ignoreGlobal: true,
-				requireReturnsDefault: true,
-			}),
-			// commonjs(),
+			// commonjs({
+			// 	exclude: 'node_modules',
+			// 	ignoreGlobal: true,
+			// 	requireReturnsDefault: true,
+			// }),
+			commonjs(),
 			typescript({ tsconfig: './tsconfig.json' }),
 			terser(),
 		],

@@ -23,7 +23,7 @@ const GRADIENT_COLORS = {
  * @param {string} variableName: The CSS variable name
  * @returns {string} rgb or rgba composed string
  */
-const withOpacity = (variableName) => {
+function withOpacity(variableName) {
 	return ({ opacityValue }) => {
 		if (opacityValue !== undefined) {
 			return `rgba(var(${variableName}), ${opacityValue})`
@@ -39,7 +39,7 @@ const withOpacity = (variableName) => {
  * @param {Object} colorsDictionary - Key value dictionary with all branding colors
  * @returns object - {base: rgba(var(--color-text-base))}
  */
-const generateColors = (colorsDictionary) => {
+function generateColors(colorsDictionary) {
 	const colors = {}
 
 	if (colorsDictionary !== undefined) {
@@ -51,6 +51,8 @@ const generateColors = (colorsDictionary) => {
 	return colors
 }
 
-exports.textColors = () => generateColors(TEXT_COLORS)
-exports.backgroundColors = () => generateColors(BACKGROUND_COLORS)
-exports.gradientColors = () => generateColors(GRADIENT_COLORS)
+module.exports = {
+	textColors: () => generateColors(TEXT_COLORS),
+	backgroundColors: () => generateColors(BACKGROUND_COLORS),
+	gradientColors: () => generateColors(GRADIENT_COLORS),
+}

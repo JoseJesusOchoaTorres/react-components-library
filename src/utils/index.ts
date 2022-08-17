@@ -1,2 +1,4 @@
-const theme = require('./')
-export default theme
+// const theme = require('./theme')
+// export default theme
+
+export { default as hello } from './hello'

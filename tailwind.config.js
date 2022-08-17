@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const theme = require('./src/utils/theme')
+const theme = require('./src/utils/theme.js')
 
 module.exports = {
 	content: ['./src/**/*.{html,tsx,jsx}'],
@@ -12,15 +12,15 @@ module.exports = {
 				},
 			},
 			backgroundColor: {
-        brand: {
-          ...theme.backgroundColors(),
-        }
-      },
+				brand: {
+					...theme.backgroundColors(),
+				},
+			},
 			gradientColorStops: {
-        brand: {
-          ...theme.gradientColors(),
-        }
-      }
+				brand: {
+					...theme.gradientColors(),
+				},
+			},
 		},
 	},
 	plugins: [],
