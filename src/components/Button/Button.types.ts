@@ -1,3 +1,6 @@
+import { ReactNode } from 'react'
 export interface ButtonProps {
-	label: string
+	title?: string
+	className?: string
+	children: ReactNode
 }

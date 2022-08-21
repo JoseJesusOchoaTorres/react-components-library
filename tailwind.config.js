@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const theme = require('./src/utils/theme.js')
+const theme = require('./src/theme/theme.js')
 
 module.exports = {
 	content: ['./src/**/*.{html,tsx,jsx}'],

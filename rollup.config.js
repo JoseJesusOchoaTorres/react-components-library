@@ -17,11 +17,6 @@ export default [
 		input: 'src/index.ts',
 		output: [
 			{
-				file: packageJson.main,
-				format: 'cjs',
-				sourcemap: true,
-			},
-			{
 				file: packageJson.module,
 				format: 'esm',
 				sourcemap: true,
@@ -31,18 +26,23 @@ export default [
 			peerDepsExternal(),
 			resolve(),
 			postcss(),
-			// commonjs({
-			// 	exclude: 'node_modules',
-			// 	ignoreGlobal: true,
-			// 	requireReturnsDefault: true,
-			// }),
 			commonjs(),
 			typescript({ tsconfig: './tsconfig.json' }),
 			terser(),
 		],
 	},
 	{
-		// input: 'dist/esm/types/index.d.ts',
+		input: 'src/theme/theme.js',
+		output: [
+			{
+				file: packageJson.theme,
+				format: 'cjs',
+				sourcemap: true,
+			},
+		],
+		plugins: [resolve(), commonjs(), terser()],
+	},
+	{
 		input: 'dist/esm/index.d.ts',
 		output: [{ file: 'dist/index.d.ts', format: 'esm' }],
 		plugins: [dts()],
