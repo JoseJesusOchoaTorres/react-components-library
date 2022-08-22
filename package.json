@@ -14,8 +14,8 @@
 		"prepare": "husky install",
 		"pre-commit": "lint-staged",
 		"build-storybook": "build-storybook",
-		"build-tailwind-file": "NODE_ENV=production npx tailwindcss -o ./dist/tailwind.css --minify",
-		"build-library": "NODE_ENV=production npx tailwindcss -o ./dist/tailwind.css --minify && npm run rollup"
+		"svgr": "svgr --typescript --icon --title-prop --replace-attr-values '#000=currentColor' -d ./src/icons ./src/assets/svg",
+		"build": "rimraf ./src/icons/ && rimraf dist && npm run svgr && npm run rollup"
 	},
 	"peerDependencies": {
 		"react": "^18.2.0",
@@ -41,6 +41,7 @@
 		"@storybook/manager-webpack5": "^6.5.9",
 		"@storybook/react": "^6.5.9",
 		"@storybook/testing-library": "0.0.13",
+		"@svgr/cli": "^6.3.1",
 		"@testing-library/react": "^13.3.0",
 		"@types/jest": "^28.1.6",
 		"@types/react": "^18.0.15",
@@ -69,8 +70,10 @@
 		"prettier-plugin-tailwindcss": "^0.1.13",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"rimraf": "^3.0.2",
 		"rollup": "^2.77.2",
 		"rollup-plugin-dts": "^4.2.2",
+		"rollup-plugin-filesize": "^9.1.2",
 		"rollup-plugin-peer-deps-external": "^2.2.4",
 		"rollup-plugin-postcss": "^4.0.2",
 		"rollup-plugin-terser": "^7.0.2",

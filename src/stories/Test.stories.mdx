@@ -1,0 +1,32 @@
+import {
+	Canvas,
+	Story,
+	Meta,
+	Title,
+	IconGallery,
+	IconItem,
+} from '@storybook/addon-docs/'
+import * as Icons from '../icons'
+
+<Meta title="Icons/Test" />
+
+export const AllIcons = () =>
+	Object.values(Icons).map((IconComponent, index) => (
+		<IconComponent key={`icon-${index}`} />
+	))
+
+<style>
+	{`
+		h6 {
+			font-weight: bold;
+		}
+  `}
+</style>
+
+# Icon gallery test
+
+<h6>Thin icons:</h6>
+
+<Canvas>
+	<Story name="AllIcons">{AllIcons.bind({})}</Story>
+</Canvas>

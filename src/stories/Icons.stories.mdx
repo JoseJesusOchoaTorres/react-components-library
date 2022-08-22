@@ -1,0 +1,40 @@
+import { Meta, Title, IconGallery, IconItem } from '@storybook/addon-docs/'
+import { UsersThin, UsersThreeThin, VaultThin } from '../icons'
+
+<Meta title="Icons/Gallery" />
+
+<style>
+	{`
+		h6 {
+			font-weight: bold;
+		}
+  `}
+</style>
+
+# Icon gallery
+
+<h6>Thin icons:</h6>
+
+<IconGallery>
+	<IconItem name="UsersThin">
+		<UsersThin
+			title="UsersThin"
+			titleId="UsersThin"
+			style={{ color: '#000' }}
+		/>
+	</IconItem>
+	<IconItem name="UsersThreeThin">
+		<UsersThreeThin
+			title="UsersThreeThin"
+			titleId="UsersThreeThin"
+			style={{ color: '#000' }}
+		/>
+	</IconItem>
+	<IconItem name="VaultThin">
+		<VaultThin
+			title="VaultThin"
+			titleId="VaultThin"
+			style={{ color: '#000' }}
+		/>
+	</IconItem>
+</IconGallery>
