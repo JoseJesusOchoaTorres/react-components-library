@@ -1,0 +1,95 @@
+import {
+	Canvas,
+	Story,
+	Meta,
+	Title,
+	IconGallery,
+	IconItem,
+} from '@storybook/addon-docs/'
+
+import * as Icons from '../icons'
+
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+<Meta title="Icons/Gallery" />
+
+<style>
+	{`
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.icon__container {
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 1rem;
+			border: 1px solid #e1e1e1;
+			padding: 1rem;
+			border-radius: 5px;
+			min-width: 5rem;
+			min-height: 3rem;
+			flex-grow: 1;
+		}
+
+		.icon__name {
+			margin-bottom: 0.5rem;
+    	font-size: 0.8rem;
+    	color: #4f4f4f;
+			cursor: auto; 
+		}
+
+		.icon__container:hover {
+			background-color: #e1e1e1;
+			cursor: pointer;
+		}
+  `}
+</style>
+
+# Icon gallery
+
+<h6>All gallery icons (Click on the icon to copy the name)</h6>
+
+export const copyToClipboard = (name) => {
+	navigator.clipboard.writeText(name)
+	toast(`📋 ${name} copied!`)
+}
+
+export const AllIcons = () =>
+	Object.entries(Icons).map(([name, IconComponent]) => (
+		<div
+			className="icon__container"
+			key={name}
+			title="Click to copy"
+			onClick={() => copyToClipboard(name)}
+		>
+			<h6 id={name} className="icon__name">
+				{name}
+			</h6>
+			<IconComponent width="2rem" height="2rem" />
+		</div>
+	))
+
+<Story
+	name="Gallery"
+	decorators={[
+		(Story) => (
+			<div className="gallery">
+				<ToastContainer
+					position="top-right"
+					autoClose={3000}
+					hideProgressBar={false}
+					newestOnTop={false}
+					closeOnClick
+				/>
+				<Story />
+			</div>
+		),
+	]}
+>
+	{AllIcons.bind({})}
+</Story>
