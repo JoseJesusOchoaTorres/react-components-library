@@ -3,13 +3,14 @@
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/JOSEJESUSOCHOA"
 	},
-	"version": "0.0.18",
+	"version": "0.0.19",
 	"description": "Asset Mark Design System",
 	"author": "Jose Jesus Ochoa Torres",
 	"license": "MIT",
 	"scripts": {
 		"rollup": "rollup -c",
 		"test": "jest",
+		"coverage": "npm run test -- --coverage",
 		"storybook": "start-storybook -p 6006",
 		"prepare": "husky install",
 		"pre-commit": "lint-staged",

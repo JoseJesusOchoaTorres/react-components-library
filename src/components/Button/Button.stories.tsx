@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import React from 'react'
 
+import UserThin from '../../icons/UsersThin'
 import Button from './Button'
 
 export default {
@@ -17,8 +18,8 @@ Primary.args = {
 	children: 'Button 1',
 }
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-	title: 'Title example 2',
-	children: 'Button 2',
+export const Icon = Template.bind({})
+Icon.args = {
+	title: 'Icon button',
+	children: <UserThin width="2rem" height="2rem" className="text-pink-800" />,
 }
