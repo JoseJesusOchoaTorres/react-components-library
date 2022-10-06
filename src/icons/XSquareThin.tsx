@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { SVGProps } from 'react'
 interface SVGRProps {
-	title?: string;
-	titleId?: string;
+	title?: string
+	titleId?: string
 }
 
 const SvgXSquareThin = ({
@@ -15,6 +15,7 @@ const SvgXSquareThin = ({
 		viewBox="0 0 256 256"
 		width="1em"
 		height="1em"
+		role="img"
 		aria-labelledby={titleId}
 		{...props}
 	>

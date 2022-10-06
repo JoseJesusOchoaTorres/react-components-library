@@ -15,6 +15,7 @@ const SvgVibrateThin = ({
 		viewBox="0 0 256 256"
 		width="1em"
 		height="1em"
+		role="img"
 		aria-labelledby={titleId}
 		{...props}
 	>
