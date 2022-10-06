@@ -25,4 +25,10 @@ module.exports = {
 		'jest/no-identical-title': 'error',
 		'jest/valid-expect': 'error',
 	},
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
+	ignorePatterns: ['**/*.css'],
 }

@@ -1,3 +1,3 @@
 import '../../main.css'
 
-export { default as Button } from './Button'
+export { default as ButtonExample } from './ButtonExample'

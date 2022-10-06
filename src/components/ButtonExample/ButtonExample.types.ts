@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-export interface ButtonProps {
+export interface ButtonExampleProps {
 	title?: string
 	className?: string
 	children: ReactNode

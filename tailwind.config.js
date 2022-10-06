@@ -21,6 +21,9 @@ module.exports = {
 					...theme.gradientColors(),
 				},
 			},
+			fontFamily: {
+				...theme.fontFamilies(),
+			},
 		},
 	},
 	plugins: [],

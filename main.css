@@ -1,15 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Lora:wght@400;700&family=Nunito:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&family=Rokkitt:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
 	:root {
-		--color-text-base: 255, 255, 255;
-		--color-text-muted: 199, 210, 254;
-		--color-text-inverted: 79, 70, 229;
-		--color-fill: 67, 56, 202;
-		--color-button-accent: 255, 255, 255;
-		--color-button-accent-hover: 238, 242, 255;
-		--color-button-muted: 99, 102, 241;
+		--color-primary-0: 242, 251, 255;
+		--color-primary-10: 209, 237, 251;
+		--color-primary-20: 242, 251, 255;
+		--color-primary-30: 164, 220, 248;
+		--color-primary-40: 115, 195, 235;
+		--color-primary-50: 52, 132, 197;
+		--color-primary-60: 29, 118, 191;
+		--color-primary-70: 21, 100, 164;
+		--color-primary-80: 0, 74, 135;
+		--color-primary-90: 0, 61, 110;
+		--color-primary-100: 0, 50, 91;
+
+		--color-secondary-0: 233, 253, 254;
+		--color-secondary-10: 202, 249, 252;
+		--color-secondary-20: 156, 235, 240;
+		--color-secondary-30: 130, 217, 230;
+		--color-secondary-40: 61, 198, 255;
+		--color-secondary-50: 6, 179, 206;
+		--color-secondary-60: 21, 135, 164;
+		--color-secondary-70: 14, 108, 137;
+		--color-secondary-80: 9, 81, 110;
+		--color-secondary-90: 5, 65, 91;
+		--color-secondary-100: 1, 32, 45;
+
+		--color-neutral-0: 247, 249, 250;
+		--color-neutral-10: 236, 242, 246;
+		--color-neutral-20: 221, 229, 238;
+		--color-neutral-30: 162, 173, 186;
+		--color-neutral-40: 89, 99, 115;
+		--color-neutral-50: 62, 71, 86;
+		--color-neutral-60: 45, 54, 73;
+		--color-neutral-70: 34, 42, 61;
+		--color-neutral-80: 27, 33, 48;
+		--color-neutral-90: 21, 24, 36;
+		--color-neutral-100: 16, 18, 26;
+
+		--color-success-0: 235, 254, 234;
+		--color-success-10: 217, 250, 215;
+		--color-success-20: 155, 222, 167;
+		--color-success-30: 92, 191, 130;
+		--color-success-40: 39, 184, 109;
+		--color-success-50: 0, 169, 106;
+		--color-success-60: 0, 145, 105;
+		--color-success-70: 0, 121, 100;
+		--color-success-80: 0, 98, 90;
+		--color-success-90: 0, 79, 81;
+		--color-success-100: 1, 39, 40;
+
+		--color-alert-0: 255, 252, 229;
+		--color-alert-10: 255, 249, 204;
+		--color-alert-20: 255, 240, 153;
+		--color-alert-30: 255, 230, 102;
+		--color-alert-40: 255, 220, 63;
+		--color-alert-50: 255, 204, 0;
+		--color-alert-60: 219, 170, 0;
+		--color-alert-70: 183, 139, 0;
+		--color-alert-80: 147, 109, 0;
+		--color-alert-90: 122, 87, 0;
+		--color-alert-100: 54, 39, 0;
+
+		--color-error-0: 253, 234, 226;
+		--color-error-10: 253, 255, 213;
+		--color-error-20: 252, 208, 198;
+		--color-error-30: 248, 175, 168;
+		--color-error-40: 241, 144, 144;
+		--color-error-50: 232, 93, 97;
+		--color-error-60: 199, 78, 82;
+		--color-error-70: 167, 54, 58;
+		--color-error-80: 134, 34, 37;
+		--color-error-90: 111, 20, 23;
+		--color-error-100: 71, 14, 16;
+
+		--color-light: 255, 255, 255;
+		--color-dark: 0, 0, 0;
 	}
 }
